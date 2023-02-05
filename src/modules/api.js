@@ -10,3 +10,14 @@ export const getData = (path) => {
     return response.json();
   })
 }
+
+export const postData = (path, data) => {
+  return fetch(apiPath + path, data)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Ошибка!');
+      }
+
+      return response.json();
+    })
+}
