@@ -5,6 +5,8 @@ export const addCategory = () => {
   const previewInp = document.getElementById('category-image');
   const saveBtn = document.getElementById('category-add-btn');
 
+  //Todo: Продолжение на 42 минуте
+
   const categoryData = {
     name: '',
     preview: ''
@@ -52,7 +54,7 @@ export const addCategory = () => {
       method: 'POST',
       body: JSON.stringify(categoryData),
       headers: {
-        'Content-Type': 'aplication/json'
+        'Content-Type': 'application/json'
       }
     })
     .then((data) => {
@@ -61,8 +63,7 @@ export const addCategory = () => {
         console.log(data);
        })
     })
-
   })
 
-  // checkValues();
+  checkValues();
 }
